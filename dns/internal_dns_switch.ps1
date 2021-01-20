@@ -1,5 +1,5 @@
 ﻿<#
-internal_ca_dns_switch.ps1
+internal_dns_switch.ps1
 Version 0.1 - 09/17/2020
 Author: Lance Harbour
 Description:  Use to switch the IP addresses between two records
