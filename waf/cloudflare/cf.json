@@ -1,0 +1,15 @@
+{
+    "accountID":"",
+    "apikey":"",
+    "email":"",
+    "zoneID":"",
+    "aRecordID1":"",
+    "aRecordID2":"",
+    "aRecordIPAddress1":"",
+    "aRecordIPAddress2":"",
+    "internalZone" : "",
+    "internalDNSRecord1" : "",
+    "internalDNSRecord2" : "",
+    "internalIP1" : "",
+    "internalIP2" : ""
+}
