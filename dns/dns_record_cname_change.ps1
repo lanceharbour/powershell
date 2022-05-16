@@ -5,15 +5,16 @@ Author: Lance Harbour
 Description:  Use to switch the CNAME alias for a single DNS host record
 #>
 
+
 $DCs = Get-ADDomainController -Filter * | Sort-Object
-$zonename = "example.com"
-$record = "api"
-$newAlias = "new.api.example.com"
+$zonename = "domain.com"
+$record = "record"
+$newAlias = "newrecord.domain2.com"
 
 foreach ($DC in $DCs)
     {
     $olddns = Get-DnsServerResourceRecord -ComputerName $DC -ZoneName $zonename -Name $record
-    $newdns = [CimInstance]::new($olddns)
+    $newdns = $olddns.Clone()
     $newdns.RecordData.HostNameAlias = $newAlias
     Set-DnsServerResourceRecord -ComputerName $DC -NewInputObject $newdns -OldInputObject $olddns -ZoneName $zonename
     }

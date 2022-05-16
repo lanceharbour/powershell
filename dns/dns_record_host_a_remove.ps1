@@ -6,9 +6,9 @@ Description:  Use to remove a new Host A record on all DNS servers
 #>
 
 $DCs = Get-ADDomainController -Filter * | Sort-Object
-$zone = "devdadavidson.com"
-$record = "dnstest1"
-$ip = "10.11.42.94"
+$zone = "domain.com"
+$record = "record"
+$ip = "xxx.xxx.xxx.xxx"
 
 foreach ($DC in $DCs)
     {

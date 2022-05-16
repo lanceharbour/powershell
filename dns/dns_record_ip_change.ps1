@@ -6,9 +6,9 @@ Description:  Use to switch the IP address for a single DNS host record
 #>
 
 $DCs = Get-ADDomainController -Filter * | Sort-Object
-$zone = "zone.com"
-$record = "hostname"
-$ip = "0.0.0.0"
+$zone = "domain.com"
+$record = "dnstest1"
+$ip = "xxx.xxx.xxx.xxx"
 foreach ($DC in $DCs)
     {
     Write-Host "Changing record on $DC"

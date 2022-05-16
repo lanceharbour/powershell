@@ -6,9 +6,9 @@ Description:  Use to add a new Host A record on all DNS servers
 #>
 
 $DCs = Get-ADDomainController -Filter * | Sort-Object
-$zone = "dadco.com"
-$record = "eun"
-$ip = "10.3.55.20"
+$zone = "domain.com"
+$record = "record"
+$ip = "xxx.xxx.xxx.xxx"
 $ttl = "01:00:00"
 
 foreach ($DC in $DCs)
